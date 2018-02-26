@@ -20,6 +20,7 @@ alias cdo='cd $OLDPWD'
 alias less='less -R'
 alias wget='wget --no-check-certificate '
 alias gim='vim -u ~/.vimrc.go'
+alias inst='sudo apt-get install '
 
 export GOROOT=/usr/local/go
 export GOPATH=~/gocode:/workspace/vipr-object-qa/ECSAutomation/monitoring/go
