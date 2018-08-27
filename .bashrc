@@ -1,9 +1,9 @@
 alias ls='ls -ApC --color=auto'
-alias -- -='popd'
-alias +='pushd .'
+alias -- \-='popd'
+alias -- \+='pushd .'
 
 export TMPDIR=/tmp
-export PYTHONPATH=/workspace/vipr-object-qa/ECSAutomation/lib/
+export PYTHONPATH=~/extra/service-console/ECSAutomation/lib/
 export ANSIBLE_HOST_KEY_CHECKING=False
 
 alias gs='git status'
@@ -26,10 +26,11 @@ export GOROOT=/usr/local/go
 export GOPATH=~/gocode:/workspace/vipr-object-qa/ECSAutomation/monitoring/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 export ANSIBLE_NO_HOST_KEY_CHECKING=False
-export GREP_OPTIONS='--color=always'
+#export GREP_OPTIONS='--color=always'
+export PYTHONSTARTUP="/home/jo/.pythonrc"
 
-
-export DEVKIT_WORKSPACE_HOST_PATH=/workspace
+export DEVKIT_DOCKER_IMAGE_REPO="nile-registry.lss.emc.com:5000/emcecs/fabric/devkit"
+export DEVKIT_WORKSPACE_HOST_DIR_PATH=/home/jo/extra 
 
 qssh() {
     if [ -z "$1" ]; then

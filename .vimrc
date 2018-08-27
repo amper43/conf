@@ -26,6 +26,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+Plugin 'wincent/command-t'
+
 "emoji
 Plugin 'junegunn/vim-emoji'
 " Track the engine.
@@ -39,6 +41,7 @@ Plugin 'junegunn/vim-emoji'
 "Plugin 'sebdah/vim-delve'
 "Plugin 'gilligan/vim-lldb'
 "Plugin 'jodosha/vim-godebug'
+Plugin 'avakhov/vim-yaml'
 
 call vundle#end()
 
@@ -124,11 +127,6 @@ map <C-x> :NERDTreeToggle<CR>
 "NERDTREE
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"GitGutter
-"let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-"let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-"let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-"let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
 set statusline+={fugitive#statusline()}
 set statusline+=%*
@@ -151,4 +149,9 @@ set statusline+=%*
 "map <C-r> :!./ecs-stat-exporter-new-v2 --vdc 10.249.249.135 --configpath config/config.yml<CR>
 map <C-g> :YcmCompleter GoToDeclaration<CR>
 map <C-d> :YcmCompleter GoToDefinition<CR>
-set expandtab           " use spaces for tabs
+nnoremap <silent> <C-Right> gt
+nnoremap <silent> <C-Left> gT
+map <C-d> :YcmCompleter GoToDefinition<CR>
+set expandtab ts=4 sw=4 ai
+set mouse=a
+let g:NERDTreeMouseMode=3
