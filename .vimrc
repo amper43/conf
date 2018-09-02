@@ -44,6 +44,7 @@ Plugin 'junegunn/vim-emoji'
 Plugin 'avakhov/vim-yaml'
 Plugin 'python-mode/python-mode'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
 
 call vundle#end()
 
